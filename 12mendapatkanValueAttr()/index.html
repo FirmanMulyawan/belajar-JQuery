@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tutorial belajar JQuery Part 7 : Mendapatkan nilai dan value dengan JQuery</title>
+    <script type="text/javascript" src="./jquey.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <h1>Get Function JQuery | www.malasngoding.com</h1>
+    <input type="text" name="nama" class="nama">
+    <button id="tombol">KLIK</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#tombol').click(function () {
+            var nama = $(".nama").attr('type');
+            alert(nama);
+        });
+    });
+</script>
+
+</html>

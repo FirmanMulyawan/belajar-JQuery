@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.nama {
+  padding: 9px;
+  font-size: 16pt;
+}
+
+#tombol {
+  padding: 10px;
+  color: #fff;
+  background: #34495e;
+  border: none;
+}

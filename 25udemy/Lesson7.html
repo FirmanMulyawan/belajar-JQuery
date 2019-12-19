@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Learning Course</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+<div id="header">
+  <h1>The Learning Website</h1>
+</div>
+<div id="nav"> Home | About | Blog </div>
+<div id="section">
+  <div id="topSection">
+    <h1>Home</h1>
+    <p> This is going to be the main page of our website.<br>
+      This is just a new <span class="first">span</span> <span class="first">This is just a new div</span> </p>
+    <div id="selOne"> Once clicked this will hide using the id selector</div>
+    <div id="selTwo"> <b>title</b><BR>
+      <p> Get Text from selTwo </p>
+      This is another selector using #id</div>
+    <BR>
+    <BR>
+    <BR>
+    <div>
+      <button id="myText">Get Text </button>
+	       <button id="myHtml">Get HTML </button>
+		  	 
+    </div>
+    <div id="selThree">Nothing Selected yet.</div>
+    <BR>
+    <BR>
+    <BR>
+    <div id="selFour">
+      <ul>
+        <li id="listA" class="listClass">List A</li>
+        <li id="listB" class="listClass">List B</li>
+        <li id="listC" class="listClass">List C</li>
+        <li id="listD" class="listClass">List D</li>
+        <li id="listE" class="listClass">List E</li>
+      </ul>
+    </div>
+  </div>
+  <div id="formSection">
+    <form>
+      Name :
+      <input name="firstName" type="text" id="firstName" value="firstName value">
+      <br>
+      Email :
+      <input name="email" type="email" id="email">
+      <br>
+      <input name="submitButton" type="submit" id="submitButton">
+    </form>
+  </div>
+    <div>
+        <button id="myVal">Get Value </button> 
+	 <button id="myAtt">Get Attribute </button>
+    </div>
+  
+  <p>We had to place some links to <a href="http://www.discoveryvip.com"> websites </a> </p>
+  <p> Update this code to improve on the site experience.
+    This is just a second <span class="second">span</span> <span class="second">This is another new div</span> In this section we added some images</p>
+  <p> <img id="myImage" src="http://lorempixel.com/400/200/" alt="temp image"> </p>
+</div>
+<div id="footer" > Copyright © discoveryvip.com </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+ 
+<script>
+/*
+*********
+Challenge
+*********
+*/
+$(document).ready(function(){
+$("#myText").click(function(){
+	console.log($("#selTwo").text());
+	$("#selThree").text($("#selTwo").text());
+});
+$("#myHtml").click(function(){
+	console.log($("#selTwo").html());
+		$("#selThree").html($("#selTwo").html());
+});
+
+
+
+$("#myVal").click(function(){
+	console.log($("#firstName").val());
+	$("#email").val($("#firstName").val());
+});
+$("#myAtt").click(function(){
+	console.log($("#myImage").attr("alt"));
+});
+
+
+});
+
+</script>
+</body>
+</html>

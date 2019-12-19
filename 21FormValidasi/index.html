@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Membuat Form Validasi Dengan JQuery (Tanpa Plugin) | www.malasngoding.com</title>
+    <script type="text/javascript" src="./jquey.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <h1>Membuat Form Validasi Dengan JQuery (Tanpa Plugin) <br /> www.malasngoding.com</h1>
+    <div class="kotak">
+        <form method="post" class="form">
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama anda..">
+            <span class="pesan pesan-nama">Anda harus mengisi nama!</span><br /><br />
+
+            <input type="submit" value="Simpan">
+        </form>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.form').submit(function () {
+            var nama = $('#nama').val().length;
+
+            if (nama == 0) {
+                $(".pesan-nama").css('display', 'block');
+                return false;
+            }
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tutorial belajar JQuery Part 10 : Menghapus Element dengan JQuery</title>
+    <script type="text/javascript" src="./jquey.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <h1>remove Function JQuery | www.malasngoding.com</h1>
+
+    <button class="tombol">Tombol</button>
+
+    <div class="kotak">
+        <span>INI ADALAH KOTAK</span>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.tombol').click(function () {
+            $('.kotak').remove();
+        });
+    });
+</script>
+
+</html>

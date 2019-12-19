@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM Learning Course</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <style>
+    .example {
+      color: #004CFF;
+      background: #FF0004;
+      font-weight: bold;
+    }
+
+    .elOne {
+      color: #00DBFF;
+      background: #EEEEEE;
+    }
+
+    .selOne {
+      color: #A89B9B;
+    }
+
+    #output {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #selTwo {
+      color: #FF0004;
+    }
+  </style>
+</head>
+
+<body>
+  <nav role="navigation" class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span
+          class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+          class="icon-bar"></span> </button>
+      <a href="#" class="navbar-brand">Home Page</a> </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="topSection" class="row">
+      <p> This is going to be the main page of our website.<br>
+        This is just a new <span class="elOne">span</span> <span class="elOne">This is just a new div</span> </p>
+    </div>
+    <div id="section">
+      <h1>Home</h1>
+      <p> This is going to be the main page of our website.<br>
+        This is just a new <span class="elOne">span</span> <span class="elOne">This is just a new div</span> </p>
+      <span class="elOne">span</span>
+      <div id="selOne"> Once clicked this will hide using the id selector</div>
+      <div id="selTwo"> <strong>This is another selector using #id</strong></div>
+      <div id="selThree">
+        <ul>
+          <li id="listA" class="listClass">List A</li>
+          <li id="listB" class="listClass">List B</li>
+          <li id="listC" class="listClass">List C</li>
+          <li id="listD" class="listClass">List D</li>
+          <li id="listE" class="listClass">List E</li>
+        </ul>
+      </div>
+      <p>We had to place some links to <a href="http://www.discoveryvip.com" target="_blank"> websites </a> </p>
+      <p> Update this code to improve on the site experience.
+        This is just a elTwo <span class="elTwo">span</span> <span class="elTwo">This is another new div</span> In this
+        section we added some images</p>
+      <p> <img id="myImage" src="http://lorempixel.com/400/200/" alt="rusak"> </p>
+    </div>
+    <div class="row">
+      <div id="output">There is no output yet!!! </div>
+    </div>
+    <div class="row">
+      <p id="buttonOutput"> Buttons</p>
+      <button id="btnA" class="btn">Button A</button>
+      <button id="btnB" class="btn">Button B</button>
+      <button id="btnC" class="btn">Button C</button>
+      <button id="btnD" class="btn">Button D</button>
+    </div>
+    <div class="row">
+      <p> Form</p>
+      Name :
+      <input name="firstName" type="text" id="firstName" value="First Name">
+      <br>
+      <input name="elOneName" type="text" id="elOneName" value="Last Name">
+      <br>
+      Email :
+      <input name="email" type="email" id="email">
+      <br>
+      <input name="email2" type="email" id="email2">
+      <br>
+      <button name="submitButton" type="button" id="submitButton" class="btn">Click me to submit the form</button>
+    </div>
+    <div id="footer" class="row">
+      <div> Copyright © <a id="myWebsite" href="http://www.discoveryvip.com" target="_blank">www.discoveryvip.com</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    /*
+    *********
+    Challenge
+    
+    *********
+      */
+
+    $(document).ready(function () {
+      $("#btnA").click(function () {
+        console.log($("#selTwo").text());
+        $("#output").html($("#selTwo").text());
+      });
+      $("#btnB").click(function () {
+        $("#output").html($("#selTwo").html());
+        console.log($("#selTwo").html());
+      });
+
+
+
+      $("#btnC").click(function () {
+        $("#output").html($("#firstName").val());
+      });
+      $("#btnD").click(function () {
+        $("#output").html($("#myImage").attr("alt"));
+      });
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

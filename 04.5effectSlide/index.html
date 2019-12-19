@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tutorial belajar JQuery Part 4 : Mengenal Effect Pada JQuery</title>
+    <script type="text/javascript" src="./jquey.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <h1>Efect pada JQuery | www.malasngoding.com</h1>
+    <button id="tombol">Tampilkan kotak (slideDown)</button>
+    <button id="tombol2">Sembunyikan kotak (slideUp)</button>
+    <button id="tombol3">Effect slide Toggle kotak (slideToggle)</button>
+    <div class="box"></div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#tombol').click(function () {
+            $('.box').slideDown();
+        });
+
+        $('#tombol2').click(function () {
+            $('.box').slideUp();
+        });
+
+        $('#tombol3').click(function () {
+            $('.box').slideToggle();
+        });
+    });
+</script>
+
+</html>
